@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 // Controllers & Routes
 
 app.use(express.urlencoded({ extended: true }))
-
+app.use('./authentication', require('./controllers/authentication'))
 app.use('/places', require('./controllers/places'))
 app.use('/users', require('./controllers/users'))
 
